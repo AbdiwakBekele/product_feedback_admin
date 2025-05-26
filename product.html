@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Product Feedback Collector</title>
+
+    <!-- Custom fonts for this template-->
+    <link
+      href="vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet"
+    />
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+  </head>
+<body>
+    <body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+      <!-- Sidebar -->
+      <ul
+        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+        id="accordionSidebar"
+      >
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand" href="home.html">
+          <div class="sidebar-brand-text mx-2 w-100">
+            <span>Product Feedback Collector</span>
+          </div>
+        </a>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0" />
+
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a
+          >
+        </li>
+
+        <!-- Divider -->
+        <hr class="sidebar-divider" />
+        <li class="nav-item active">
+          <a class="nav-link" href="product.html">
+            <i class="fas fa-boxes"></i>
+            <span>Products</span></a
+          >
+        </li>
+        <hr class="sidebar-divider" />
+
+        <li class="nav-item active">
+          <a class="nav-link" href="feedbacks.html">
+            <i class="fas fa-comments"></i>
+            <span>Feedback</span></a
+          >
+        </li>
+
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+
+      
+      </ul>
+      <!-- End of Sidebar -->
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+        <!-- Main Content -->
+        <div id="content">
+          <!-- Topbar -->
+          <nav
+            class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+          >
+            <!-- Sidebar Toggle (Topbar) -->
+            <button
+              id="sidebarToggleTop"
+              class="btn btn-link d-md-none rounded-circle mr-3"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Topbar Search -->
+            <form
+              class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search"
+            >
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control bg-light border-0 small"
+                  placeholder="Search for..."
+                  aria-label="Search"
+                  aria-describedby="basic-addon2"
+                />
+                <div class="input-group-append">
+                  <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search fa-sm"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+              <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+              <li class="nav-item dropdown no-arrow d-sm-none">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="searchDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-search fa-fw"></i>
+                </a>
+                <!-- Dropdown - Messages -->
+                <div
+                  class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                  aria-labelledby="searchDropdown"
+                >
+                  <form class="form-inline mr-auto w-100 navbar-search">
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control bg-light border-0 small"
+                        placeholder="Search for..."
+                        aria-label="Search"
+                        aria-describedby="basic-addon2"
+                      />
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" type="button">
+                          <i class="fas fa-search fa-sm"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </li>
+
+              <!-- Nav Item - Alerts -->
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="alertsDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <i class="fas fa-bell fa-fw"></i>
+                  <!-- Counter - Alerts -->
+                  <span class="badge badge-danger badge-counter">3+</span>
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div
+                  class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="alertsDropdown"
+                >
+                  <h6 class="dropdown-header">Alerts Center</h6>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-primary">
+                        <i class="fas fa-file-alt text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">December 12, 2024</div>
+                      <span class="font-weight-bold"
+                        >A new monthly report is ready to download!</span
+                      >
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-success">
+                        <i class="fas fa-bug text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">February 7, 2019</div>
+                      18 New Feedback on Bugs has been reported Check it out!
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-warning">
+                        <i class="fas fa-exclamation-triangle text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">April 2, 2019</div>
+                      There are some Feedback's that haven't got any response yet!
+                      please check them out.
+                    </div>
+                  </a>
+                  
+                  <a
+                    class="dropdown-item text-center small text-gray-500"
+                    href="#"
+                    >Show All Alerts</a
+                  >
+                </div>
+              </li>
+
+              <div class="topbar-divider d-none d-sm-block"></div>
+
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="userDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small"
+                    >Admin</span
+                  >
+                  <img
+                    class="img-profile rounded-circle"
+                    src="img/undraw_profile.svg"
+                  />
+                </a>
+                <!-- Dropdown - User Information -->
+                <div
+                  class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                  aria-labelledby="userDropdown"
+                >
+                  <div class="dropdown-divider"></div>
+                  <a
+                    class="dropdown-item"
+                    href="login.html"
+                    data-toggle="modal"
+                    data-target="#logoutModal"
+                  >
+                    <i
+                      class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"
+                    ></i>
+                    Logout
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </nav>
+          <!-- End of Topbar -->
+
+
+          <div class="container-fluid">
+            <div
+              class="d-sm-flex align-items-center justify-content-between mb-4"
+            >
+              <h1 class="h3 mb-0 text-gray-800">Products</h1>
+             <button type="button" class="btn btn-primary mb-3" data-toggle="modal" data-target="#addProductModal">
+              <i class="fas fa-plus-circle mr-2"></i> Add New Product
+            </button>
+            </div>
+                    
+  
+                    <div class="card shadow mb-4">
+                      <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">Product List</h6>
+                      </div>
+                      <div class="card-body">
+                        <div class="table-responsive">
+                          <table class="table table-bordered" id="productTable" width="100%" cellspacing="0">
+                            <thead class="thead-light">
+                              <tr>
+                                <th>Product ID</th>
+                                <th>Product Name</th>
+                                <th>Category</th>
+                                <th>Release Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>PRD-001</td>
+                                <td>Smartphone X</td>
+                                <td>Electronics</td>
+                                <td>2023-05-15</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                                <td>
+                                  <button class="btn btn-primary btn-sm">View Products</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>PRD-002</td>
+                                <td>Wireless Earbuds Pro</td>
+                                <td>Audio</td>
+                                <td>2023-06-20</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                                <td>
+                                  <button class="btn btn-primary btn-sm">View Products</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>PRD-003</td>
+                                <td>Ultra HD Smart TV</td>
+                                <td>Home Entertainment</td>
+                                <td>2023-04-10</td>
+                                <td><span class="badge badge-warning">Limited Stock</span></td>
+                                <td>
+                                  <button class="btn btn-primary btn-sm">View Products</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>PRD-004</td>
+                                <td>Fitness Tracker V3</td>
+                                <td>Wearables</td>
+                                <td>2023-07-05</td>
+                                <td><span class="badge badge-success">Active</span></td>
+                                <td>
+                                  <button class="btn btn-primary btn-sm">View Products</button>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>PRD-005</td>
+                                <td>Gaming Laptop GT</td>
+                                <td>Computers</td>
+                                <td>2023-03-22</td>
+                                <td><span class="badge badge-danger">Discontinued</span></td>
+                                <td>
+                                  <button class="btn btn-primary btn-sm">View Products</button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+          <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                  <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="productForm">
+                    <!-- Basic Product Information -->
+                    <div class="card mb-4">
+                      <div class="card-header">
+                        <h6 class="m-0 font-weight-bold text-primary">Basic Information</h6>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="productName">Product Name *</label>
+                            <input type="text" class="form-control" id="productName" name="productName" required>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="productSKU">SKU/Product Code *</label>
+                            <input type="text" class="form-control" id="productSKU" name="productSKU" required>
+                          </div>
+                        </div>
+                        
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="productCategory">Category *</label>
+                            <select class="form-control" id="productCategory" name="productCategory" required>
+                              <option value="">Select Category</option>
+                              <option value="Electronics">Electronics</option>
+                              <option value="Home Appliances">Home Appliances</option>
+                              <option value="Computers">Computers</option>
+                              <option value="Audio">Audio</option>
+                              <option value="Wearables">Wearables</option>
+                              <option value="Other">Other</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="productBrand">Brand</label>
+                            <input type="text" class="form-control" id="productBrand" name="productBrand">
+                          </div>
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="productDescription">Description</label>
+                          <textarea class="form-control" id="productDescription" name="productDescription" rows="3"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Pricing & Inventory -->
+                    <div class="card mb-4">
+                      <div class="card-header">
+                        <h6 class="m-0 font-weight-bold text-primary">Pricing & Inventory</h6>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                            <label for="productPrice">Price ($) *</label>
+                            <input type="number" step="0.01" class="form-control" id="productPrice" name="productPrice" required>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="productCost">Cost ($)</label>
+                            <input type="number" step="0.01" class="form-control" id="productCost" name="productCost">
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="productQuantity">Initial Stock *</label>
+                            <input type="number" class="form-control" id="productQuantity" name="productQuantity" required>
+                          </div>
+                        </div>
+                        
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="productStatus">Status *</label>
+                            <select class="form-control" id="productStatus" name="productStatus" required>
+                              <option value="Active">Active</option>
+                              <option value="Inactive">Inactive</option>
+                              <option value="Draft">Draft</option>
+                              <option value="Discontinued">Discontinued</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="productReleaseDate">Release Date</label>
+                            <input type="date" class="form-control" id="productReleaseDate" name="productReleaseDate">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Product Images -->
+                    <div class="card mb-4">
+                      <div class="card-header">
+                        <h6 class="m-0 font-weight-bold text-primary">Product Images</h6>
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label for="productThumbnail">Thumbnail Image *</label>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="productThumbnail" name="productThumbnail" accept="image/*" required>
+                            <label class="custom-file-label" for="productThumbnail">Choose file...</label>
+                          </div>
+                          <small class="form-text text-muted">Main product image (max 2MB)</small>
+                        </div>
+                        
+                        <div class="form-group">
+                          <label for="productGallery">Additional Images</label>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="productGallery" name="productGallery" multiple accept="image/*">
+                            <label class="custom-file-label" for="productGallery">Choose files...</label>
+                          </div>
+                          <small class="form-text text-muted">Optional gallery images (max 5 files, 2MB each)</small>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- Specifications -->
+                    <div class="card">
+                      <div class="card-header">
+                        <h6 class="m-0 font-weight-bold text-primary">Specifications</h6>
+                      </div>
+                      <div class="card-body">
+                        <div id="specificationsContainer">
+                          <div class="form-row specification-row mb-3">
+                            <div class="col-md-5">
+                              <input type="text" class="form-control" name="specName[]" placeholder="Specification name">
+                            </div>
+                            <div class="col-md-5">
+                              <input type="text" class="form-control" name="specValue[]" placeholder="Value">
+                            </div>
+                            <div class="col-md-2">
+                              <button type="button" class="btn btn-danger btn-block remove-spec" disabled>
+                                <i class="fas fa-trash"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="button" id="addSpecification" class="btn btn-secondary btn-sm mt-2">
+                          <i class="fas fa-plus mr-1"></i> Add Specification
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button type="submit" form="productForm" class="btn btn-primary">Save Product</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                        </div>
+                      </div>
+                    </div>
+        </div>
+                            </div>
+                        </div>
+                      </div>
+               <div
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button
+              class="close"
+              type="button"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Select "Logout" below if you are ready to end your current session.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>      
+   </div>
+
+    <div class="modal fade" id="productDetailModal" tabindex="-1" role="dialog" aria-labelledby="productDetailModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="productDetailModalLabel">Product Details</h5>
+        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Product Images Column -->
+          <div class="col-lg-5">
+            <div class="card mb-4">
+              <div class="card-body text-center">
+                <!-- Main Product Image -->
+                <img id="detail-main-image" src="https://via.placeholder.com/400x300?text=Product+Image" class="img-fluid mb-3" alt="Product Image" style="max-height: 300px;">
+                
+                <!-- Thumbnail Gallery -->
+                <div class="row">
+                  <div class="col-3">
+                    <img src="https://via.placeholder.com/80x60?text=Thumb+1" class="img-thumbnail thumbnail-img active" alt="Thumbnail 1" style="cursor: pointer;">
+                  </div>
+                  <div class="col-3">
+                    <img src="https://via.placeholder.com/80x60?text=Thumb+2" class="img-thumbnail thumbnail-img" alt="Thumbnail 2" style="cursor: pointer;">
+                  </div>
+                  <div class="col-3">
+                    <img src="https://via.placeholder.com/80x60?text=Thumb+3" class="img-thumbnail thumbnail-img" alt="Thumbnail 3" style="cursor: pointer;">
+                  </div>
+                  <div class="col-3">
+                    <img src="https://via.placeholder.com/80x60?text=Thumb+4" class="img-thumbnail thumbnail-img" alt="Thumbnail 4" style="cursor: pointer;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Quick Stats Card -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">Quick Stats</h6>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="text-center">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="detail-feedback-count">24</div>
+                      <div class="small text-muted">Feedbacks</div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="text-center">
+                      <div class="h5 mb-0 font-weight-bold text-gray-800" id="detail-avg-rating">
+                        <span class="rating-stars">
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="fas fa-star text-warning"></i>
+                          <i class="far fa-star text-warning"></i>
+                          <span>4.0</span>
+                        </span>
+                      </div>
+                      <div class="small text-muted">Avg Rating</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Product Details Column -->
+          <div class="col-lg-7">
+            <div class="card mb-4">
+              <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">Basic Information</h6>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <th width="30%">Product ID</th>
+                        <td id="detail-product-id">PRD-001</td>
+                      </tr>
+                      <tr>
+                        <th>Product Name</th>
+                        <td id="detail-product-name">Smartphone X</td>
+                      </tr>
+                      <tr>
+                        <th>SKU</th>
+                        <td id="detail-product-sku">SMX-2023-BLK</td>
+                      </tr>
+                      <tr>
+                        <th>Category</th>
+                        <td id="detail-product-category">Electronics</td>
+                      </tr>
+                      <tr>
+                        <th>Sub-Category</th>
+                        <td id="detail-product-subcategory">Smartphones</td>
+                      </tr>
+                      <tr>
+                        <th>Brand</th>
+                        <td id="detail-product-brand">TechBrand</td>
+                      </tr>
+                      <tr>
+                        <th>Description</th>
+                        <td id="detail-product-description">Latest smartphone with advanced camera features and long battery life.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Pricing & Inventory Card -->
+            <div class="card mb-4">
+              <div class="card-header">
+                <h6 class="m-0 font-weight-bold text-primary">Pricing & Inventory</h6>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered">
+                    <tbody>
+                      <tr>
+                        <th width="30%">Price</th>
+                        <td id="detail-product-price">$899.99</td>
+                      </tr>
+                      <tr>
+                        <th>Cost</th>
+                        <td id="detail-product-cost">$650.00</td>
+                      </tr>
+                      <tr>
+                        <th>Current Stock</th>
+                        <td id="detail-product-stock">125 <span class="badge badge-success ml-2">In Stock</span></td>
+                      </tr>
+                      <tr>
+                        <th>Status</th>
+                        <td id="detail-product-status"><span class="badge badge-success">Active</span></td>
+                      </tr>
+                      <tr>
+                        <th>Release Date</th>
+                        <td id="detail-product-release">2023-05-15</td>
+                      </tr>
+                      <tr>
+                        <th>Last Updated</th>
+                        <td id="detail-product-updated">2023-08-20</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Specifications Card -->
+        <div class="card mb-4">
+          <div class="card-header">
+            <h6 class="m-0 font-weight-bold text-primary">Specifications</h6>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="specificationsTable">
+                <thead>
+                  <tr>
+                    <th width="40%">Specification</th>
+                    <th>Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Display</td>
+                    <td>6.7" AMOLED, 120Hz</td>
+                  </tr>
+                  <tr>
+                    <td>Processor</td>
+                    <td>Snapdragon 8 Gen 2</td>
+                  </tr>
+                  <tr>
+                    <td>Memory</td>
+                    <td>12GB RAM, 256GB Storage</td>
+                  </tr>
+                  <tr>
+                    <td>Camera</td>
+                    <td>Triple 50MP + 12MP + 8MP</td>
+                  </tr>
+                  <tr>
+                    <td>Battery</td>
+                    <td>5000mAh, Fast Charging</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Recent Feedback Card -->
+        <div class="card">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h6 class="m-0 font-weight-bold text-primary">Recent Feedback</h6>
+            <button class="btn btn-sm btn-primary">View All Feedback</button>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="recentFeedbackTable">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>User</th>
+                    <th>Rating</th>
+                    <th>Comments</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2023-08-20</td>
+                    <td>user1@example.com</td>
+                    <td>
+                      <div class="rating-stars">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                      </div>
+                    </td>
+                    <td>Great phone but battery could be better</td>
+                    <td><span class="badge badge-success">Processed</span></td>
+                  </tr>
+                  <tr>
+                    <td>2023-08-18</td>
+                    <td>user2@example.com</td>
+                    <td>
+                      <div class="rating-stars">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                      </div>
+                    </td>
+                    <td>Excellent camera quality!</td>
+                    <td><span class="badge badge-success">Processed</span></td>
+                  </tr>
+                  <tr>
+                    <td>2023-08-15</td>
+                    <td>user3@example.com</td>
+                    <td>
+                      <div class="rating-stars">
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="fas fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                        <i class="far fa-star text-warning"></i>
+                      </div>
+                    </td>
+                    <td>Screen scratches too easily</td>
+                    <td><span class="badge badge-warning">Pending</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Edit Product</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  // Handle file input labels
+  $('.custom-file-input').on('change', function() {
+    let fileName = $(this).val().split('\\').pop();
+    if ($(this).attr('multiple')) {
+      const files = $(this)[0].files;
+      if (files.length > 1) {
+        fileName = files.length + ' files selected';
+      } else if (files.length === 1) {
+        fileName = files[0].name;
+      }
+    }
+    $(this).next('.custom-file-label').html(fileName || 'Choose file...');
+  });
+  
+  // Add specification fields
+  $('#addSpecification').click(function() {
+    const newRow = $(`
+      <div class="form-row specification-row mb-3">
+        <div class="col-md-5">
+          <input type="text" class="form-control" name="specName[]" placeholder="Specification name">
+        </div>
+        <div class="col-md-5">
+          <input type="text" class="form-control" name="specValue[]" placeholder="Value">
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-danger btn-block remove-spec">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+      </div>
+    `);
+    $('#specificationsContainer').append(newRow);
+    
+    // Enable remove buttons when there are multiple rows
+    if ($('.specification-row').length > 1) {
+      $('.remove-spec').prop('disabled', false);
+    }
+  });
+  
+  // Remove specification fields
+  $(document).on('click', '.remove-spec', function() {
+    $(this).closest('.specification-row').remove();
+    
+    // Disable remove button if only one row left
+    if ($('.specification-row').length <= 1) {
+      $('.remove-spec').prop('disabled', true);
+    }
+  });
+  
+  // Form submission
+  $('#productForm').on('submit', function(e) {
+    e.preventDefault();
+    // Here you would handle the form submission via AJAX or regular form post
+    alert('Product would be saved here. In a real implementation, this would submit to your backend.');
+    $('#addProductModal').modal('hide');
+    // Reset form
+    this.reset();
+    $('.custom-file-label').html('Choose file...');
+  });
+});
+</script>
+<script>
+$(document).ready(function() {
+  // Handle View Products button clicks
+  $('.btn-primary.btn-sm').filter(function() {
+    return $(this).text().trim() === 'View Products';
+  }).click(function() {
+    const $row = $(this).closest('tr');
+    const productId = $row.find('td:eq(0)').text();
+    const productName = $row.find('td:eq(1)').text();
+    const category = $row.find('td:eq(2)').text();
+    const releaseDate = $row.find('td:eq(3)').text();
+    const status = $row.find('td:eq(4) span').text();
+    const statusClass = $row.find('td:eq(4) span').attr('class');
+    
+    // Set basic information
+    $('#detail-product-id').text(productId);
+    $('#detail-product-name').text(productName);
+    $('#detail-product-category').text(category);
+    $('#detail-product-release').text(releaseDate);
+    $('#detail-product-status').html(`<span class="${statusClass}">${status}</span>`);
+    
+    // In a real application, you would fetch the rest of the details from your backend
+    // Here we're using sample data based on the product
+    setSampleProductDetails(productId, productName, category);
+    
+    $('#productDetailModal').modal('show');
+  });
+  
+  // Thumbnail image click handler
+  $(document).on('click', '.thumbnail-img', function() {
+    $('.thumbnail-img').removeClass('active');
+    $(this).addClass('active');
+    const newSrc = $(this).attr('src').replace('80x60', '400x300');
+    $('#detail-main-image').attr('src', newSrc);
+  });
+  
+  // Sample data function - replace with actual API calls
+  function setSampleProductDetails(productId, productName, category) {
+    // This would come from your backend in a real application
+    const sampleData = {
+      'PRD-001': {
+        sku: 'SMX-2023-BLK',
+        subcategory: 'Smartphones',
+        brand: 'TechBrand',
+        description: 'Latest smartphone with advanced camera features and long battery life.',
+        price: '$899.99',
+        cost: '$650.00',
+        stock: '125',
+        updated: '2023-08-20',
+        feedbackCount: '24',
+        avgRating: '4.0'
+      },
+      'PRD-002': {
+        sku: 'WEB-2023-PRO',
+        subcategory: 'Wireless Earbuds',
+        brand: 'SoundMaster',
+        description: 'Premium wireless earbuds with active noise cancellation.',
+        price: '$249.99',
+        cost: '$180.00',
+        stock: '89',
+        updated: '2023-08-18',
+        feedbackCount: '18',
+        avgRating: '4.2'
+      },
+      'PRD-003': {
+        sku: 'TV-2023-65UHD',
+        subcategory: 'Smart TVs',
+        brand: 'VisionPlus',
+        description: '65-inch Ultra HD Smart TV with HDR and streaming apps.',
+        price: '$1299.99',
+        cost: '$950.00',
+        stock: '32',
+        updated: '2023-08-15',
+        feedbackCount: '12',
+        avgRating: '4.5'
+      },
+      'PRD-004': {
+        sku: 'FIT-2023-V3',
+        subcategory: 'Fitness Trackers',
+        brand: 'FitLife',
+        description: 'Advanced fitness tracker with heart rate and sleep monitoring.',
+        price: '$149.99',
+        cost: '$90.00',
+        stock: '156',
+        updated: '2023-08-22',
+        feedbackCount: '8',
+        avgRating: '3.8'
+      },
+      'PRD-005': {
+        sku: 'GL-2023-GT',
+        subcategory: 'Gaming Laptops',
+        brand: 'GameMaster',
+        description: 'High-performance gaming laptop with RTX graphics.',
+        price: '$1999.99',
+        cost: '$1450.00',
+        stock: '0',
+        updated: '2023-07-30',
+        feedbackCount: '15',
+        avgRating: '4.1'
+      }
+    };
+    
+    const data = sampleData[productId] || {};
+    
+    // Set the sample data
+    $('#detail-product-sku').text(data.sku || 'N/A');
+    $('#detail-product-subcategory').text(data.subcategory || 'N/A');
+    $('#detail-product-brand').text(data.brand || 'N/A');
+    $('#detail-product-description').text(data.description || 'No description available.');
+    $('#detail-product-price').text(data.price || '$0.00');
+    $('#detail-product-cost').text(data.cost || '$0.00');
+    $('#detail-product-stock').html(data.stock ? 
+      `${data.stock} <span class="badge ${data.stock > 0 ? 'badge-success' : 'badge-danger'} ml-2">${data.stock > 0 ? 'In Stock' : 'Out of Stock'}</span>` : 
+      '0 <span class="badge badge-danger ml-2">Out of Stock</span>');
+    $('#detail-product-updated').text(data.updated || 'N/A');
+    $('#detail-feedback-count').text(data.feedbackCount || '0');
+    
+    // Set rating stars
+    const rating = parseFloat(data.avgRating || 0);
+    const $ratingContainer = $('#detail-avg-rating .rating-stars');
+    $ratingContainer.empty();
+    for (let i = 1; i <= 5; i++) {
+      if (i <= rating) {
+        $ratingContainer.append('<i class="fas fa-star text-warning"></i>');
+      } else if (i - 0.5 <= rating) {
+        $ratingContainer.append('<i class="fas fa-star-half-alt text-warning"></i>');
+      } else {
+        $ratingContainer.append('<i class="far fa-star text-warning"></i>');
+      }
+    }
+    $ratingContainer.append(`<span> ${rating.toFixed(1)}</span>`);
+  }
+});
+</script>
+
+<style>
+.thumbnail-img {
+  transition: all 0.3s ease;
+}
+.thumbnail-img:hover {
+  opacity: 0.8;
+}
+.thumbnail-img.active {
+  border: 2px solid #4e73df !important;
+}
+.rating-stars {
+  display: inline-block;
+}
+.rating-stars i {
+  font-size: 1rem;
+}
+</style>
+
+ </body>
+</html>
